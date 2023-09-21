@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+* {
+    font-family: 'Mooli', sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url(./background_madeira.jpg);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+#menu-final {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
