@@ -1,3 +1,18 @@
+const imagensPratos = {
+    "Bolinho de Bacalhau": "Bolinho de Bacalhau.png",
+    "Bruschetta": "Bruschetta.png",
+    "Casquinha de Siri": "Casquinha de Siri.png",
+    "Moqueca Camarão": "Moqueca Camarão.png",
+    "Risoto Cogumelo": "Risoto Cogumelo.png",
+    "Ravioli": "Ravioli.png",
+    "File Mignon": "File Mignon.png",
+    "Stroganoff": "Stroganoff.png",
+    "Brownie": "Brownie.png",
+    "Banoffe": "Banoffe.png",
+    "Petit Gateau": "Petit Gateau.png"
+};
+
+
 const entradas = ["Bolinho de Bacalhau", "Bruschetta", "Casquinha de Siri"];
 const pratosPrincipais = ["Moqueca Camarão", "Risoto Cogumelo", "Ravioli", "File Mignon", "Stroganoff"];
 const sobremesas = ["Brownie", "Banoffe", "Petit Gateau"];
@@ -24,9 +39,20 @@ function mostrarMenuFinal() {
 
     escolhas.forEach((escolha) => {
         const nomePrato = escolha.value;
-        menuFinal.innerHTML += `<p>${nomePrato}</p>`;
+        const imagemPrato = imagensPratos[nomePrato]; // Obtém a URL da imagem
+        const imagemElement = document.createElement("img");
+        imagemElement.src = imagemPrato;
+        imagemElement.alt = nomePrato; // Define um texto alternativo para a imagem
+
+        // Crie um parágrafo para cada imagem e nome do prato
+        const paragrafo = document.createElement("p");
+        paragrafo.appendChild(imagemElement);
+        paragrafo.innerHTML += `<br>${nomePrato}`;
+        
+        menuFinal.appendChild(paragrafo); // Adicione o parágrafo ao menu final
     });
 }
+
 
 const botaoEnviar = document.createElement("button");
 botaoEnviar.innerText = "Pedir";

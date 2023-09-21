@@ -34,3 +34,16 @@ button {
     text-align: center;
     flex-direction: column;
 }
+
+#menu-final img {
+    max-width: 100px;
+    margin: 5px; 
+    display: inline-block;
+}
+
+#menu-final p {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+    width: calc(33.33% - 10px);
+}
